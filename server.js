@@ -12,7 +12,7 @@ const PORT = process.env.PORT ?? 3000;
 //Usando solo origenes que vos quieras que tengan  acceso a tu API
 app.use(cors({
     origin: (origin, callback) => {
-        const allowedOrigins = ['http://localhost:3000', 'http://localhost:5173', 'http://localhost:4200', 'https://prueba-tecnica-weso.vercel.app/'];
+        const allowedOrigins = ['http://localhost:3000', 'http://localhost:5173', 'http://localhost:4200', 'https://prueba-tecnica-weso.vercel.app'];
         if (allowedOrigins.includes(origin) || !origin) {
             return callback(null, true)
         }
